@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 
 const userModel  = mongoose.Schema( {
 
+    name:  {
+        type:String,
+    
+    },
+
     phoneNumber: {
         type: Number,
         require: true
@@ -22,8 +27,7 @@ const userModel  = mongoose.Schema( {
     },
 
     token: {
-        type: String,
-        require: true
+        type: String
     }
 });
 
