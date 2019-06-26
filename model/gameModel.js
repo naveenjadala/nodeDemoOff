@@ -15,6 +15,11 @@ const gameModel = new mongoose.Schema({
     gameDate: {
         type: Date,
         default: Date.now
-    }
+    },
+
+    matchsList:[{
+        type: mongoose.Schema.ObjectId,
+        ref: 'match'
+    }]
 })
 module.exports = mongoose.model('createGame', gameModel);
